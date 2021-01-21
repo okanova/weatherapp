@@ -31,6 +31,8 @@
                     if($exception->getCode() == "42S02"){
                         db()->query(file_get_contents(dirname(__DIR__).'/table.sql'));
                         $check = true;
+                    }else{
+                        echo $exception->getMessage();
                     }
                 }
                 if($check){
