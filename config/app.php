@@ -3,6 +3,7 @@ require_once '../vendor/autoload.php';
 define('PROJECT_ROOT', dirname(__DIR__));
 $dotenv = Dotenv\Dotenv::createImmutable(PROJECT_ROOT);
 $dotenv->load();
+ini_set('error_reporting',1);
 require_once 'helper.php';
 return [
     "cities" => [
